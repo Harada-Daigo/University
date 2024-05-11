@@ -1,0 +1,5 @@
+2. , 5. and 6.
+3.
+Superclass can refer to subclass.
+Object of superclass that was casted from Subclass can cast subclass.
+

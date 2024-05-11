@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta charset="utf-8">
+        <title>logic</title>
+        <style>
+             * { padding: 0; margin: 0; }
+            html,body {width: 100%; height: 100%;overflow: hidden;background-color: darkgrey;}
+            body{display:inline-flex;}
+            canvas {background:lightgray;width:100%; height:100vh;}
+            #main{
+                width:70%; height:100vh;
+            }
+            #side{
+                width:30%;height: 100vh;
+                background: white;
+                display: block;
+                
+            }
+            #pmtr{width:100%; height: 50vh;overflow: scroll;}
+            #res{width: 100%; height: 50vh;background:wheat;overflow: scroll;}
+        </style>
+    </head>
+    <body>
+        <div id="main">
+            <canvas id="canvas" ></canvas>
+        </div>
+        <div id="side">
+            <div id="pmtr">
+                <p>[Create]</p>
+                <label for="unit">UNIT=</label>
+                <select name="Unit" size="1" id="unit">
+                    <option value="INPUT">INPUT</option>
+                    <option value="OUTPUT">OUTPUT</option>
+                    <option value="AND">AND</option>
+                    <option value="OR">OR</option>
+                    <option value="XOR">XOR</option>
+                    <option value="INV">INV</option>
+                </select>
+                <br>
+                <label for="value">value=</label>
+                <input type="number" id="value" name="value" minlength="1" maxlength="1"/>
+                <br>
+                <label for="name">name=</label>
+                <input type="text" id="name" name="name" minlength="1" maxlength="10"/>
+                <br>
+                <label for="x">X=</label>
+                <input type="number" id="x" name="x" minlength="1" maxlength="4"/>
+                <br>
+                <label for="y">Y=</label>
+                <input type="number" id="y" name="y" minlength="1" maxlength="4"/>
+                <br>
+                <label for="adpNum">adpNum=</label>
+                <input type="number" id="adpNum" name="adpNum" minlength="1" maxlength="4"/>
+                <br>
+                <label for="tp">tp=</label>
+                <input type="number" id="tp" name="tp" minlength="1" maxlength="4"/>
+                <br>
+                <label for="sbm1"></label>
+                <input type="button" id="sbm1" name="sbm1" value="確定"/>
+
+                <p>[Connect]</p>
+                <label for="id2">(->)ID=</label>
+                <input type="number" id="id2" name="id2" minlength="1" maxlength="10"/>
+                <br>
+                <label for="id1">ID(->)=</label>
+                <input type="number" id="id1" name="id1" minlength="1" maxlength="10"/>
+                <br>
+                <label for="sbm2"></label>
+                <input type="button" id="sbm2" name="sbm2" value="確定"/>
+
+                <p>[Simulate]</p>
+                <label for="input">INPUT=</label>
+                <input type="text" id="input" name="input" minlength="1" maxlength="10"/>
+                <label for="sbm3"></label>
+                <input type="button" id="sbm3" name="sbm3" value="シミュレート"/>
+                <p>[Edit]</p>
+                <label for="id">ID=</label>
+                <input type="text" id="id" name="id" minlength="1" maxlength="10"/>
+                <br>
+                <label for="name2">name=</label>
+                <input type="text" id="name2" name="name2" minlength="1" maxlength="10"/>
+                <br>
+                <label for="x2">X=</label>
+                <input type="number" id="x2" name="x2" minlength="1" maxlength="4"/>
+                <br>
+                <label for="y2">Y=</label>
+                <input type="number" id="y2" name="y2" minlength="1" maxlength="4"/>
+                <br>
+                <label for="adpNum2">adpNum=</label>
+                <input type="number" id="adpNum2" name="adpNum2" minlength="1" maxlength="4"/>
+                <br>
+                <label for="tp2">tp=</label>
+                <input type="number" id="tp2" name="tp2" minlength="1" maxlength="4"/>
+                <br>
+                <label for="sbm4"></label>
+                <input type="button" id="sbm4" name="sbm4" value="編集完了"/>
+                <p>[Disconnect]</p>
+                <label for="id2_1">ID=</label>
+                <input type="text" id="id2_1" name="id2_1" minlength="1" maxlength="10"/>
+                <br>
+                <label for="id2_2">ID=</label>
+                <input type="text" id="id2_2" name="id2_2" minlength="1" maxlength="10"/>
+                <br>
+                <label for="sbm5"></label>
+                <input type="button" id="sbm5" name="sbm5" value="解除"/>
+            </div>
+            <div id="res">
+                
+            </div>
+        </div>
+        <script type="text/javascript" src ="logic.js"></script>
+    </body>
+</html>

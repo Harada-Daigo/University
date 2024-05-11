@@ -1,0 +1,1 @@
+memory of b's infomation is same as memory of a.

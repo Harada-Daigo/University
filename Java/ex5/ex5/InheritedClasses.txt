@@ -1,0 +1,6 @@
+2
+2
+3
+3
+advantages that the solutino to Problem C is what I don't have to write some code. 
+Yes, I can. Subclass can cast to superclass. 

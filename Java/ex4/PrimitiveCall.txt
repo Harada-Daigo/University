@@ -1,0 +1,2 @@
+It was changed x and y  in not test() but movePoint().
+If it want to change x and y in test(), it use "this.".

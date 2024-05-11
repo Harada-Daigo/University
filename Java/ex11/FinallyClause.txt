@@ -1,0 +1,1 @@
+(1) Because finally clause is always executed. 

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta charset="utf-8">
+        <title>war</title>
+        <style>
+             * { 
+                padding: 0;
+                margin: 0;
+             }
+            html,body {
+                width: 100%;
+                height: 80vh;
+                overflow: hidden;
+            }
+            header{
+                width: 100vw;
+                height: 20vh;
+            }
+            #sideCanvas1{
+                background-color: orange;
+            }
+            #sideCanvas2{
+                background-color: orange;
+            }
+            #title{
+            }
+        </style>
+    </head>
+    <header>
+        <h1 id="title">将棋</h1>
+    </header>
+    <body background="wahu.png">
+        <p id="you">あなた</p>
+        <p id="they"> お相手</p>
+        <canvas id="sideCanvas2"></canvas>
+        <canvas id="canvas"></canvas>
+        <canvas id="sideCanvas1"></canvas>
+        <button>^</button>
+        <script type="text/javascript" src ="shougi_app.js"></script>
+    </body>
+</html>

@@ -1,0 +1,4 @@
+p1 != p2 
+p1 and p2 is not equal
+These object is created using keyword of new, so these created different object in defferent addresses.
+Therefore, it resulted in these.
