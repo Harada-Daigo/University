@@ -1,0 +1,54 @@
+\documentclass[twocolumn]{jarticle}
+\usepackage[dvips]{graphicx}
+\usepackage{ascmac}
+
+\setlength{\columnsep}{5mm}
+\setlength{\textwidth}{175mm}
+\setlength{\textheight}{25cm}
+\addtolength{\topmargin}{-25mm}
+\addtolength{\oddsidemargin}{-7mm}
+\addtolength{\evensidemargin}{-7mm}
+
+\def\baselinestretch{.97}
+
+\title{1-1 グラフとその表現}
+\author{番号 氏名} 
+\date{平成xx年x月x日x曜日}
+
+\newtheorem{tem}{定理}
+\newtheorem{lem}{例}
+\newtheorem{tei}{定義}
+
+\begin{document}
+\maketitle
+
+\section{グラフ}
+グラフ$G$は，いくつかの点とこれらの点を結ぶいくつかの辺から構成される．
+グラフ$G$の\textbf{点集合を$V(G)$}，\textbf{辺集合を$E(G)$}とする．
+グラフ$G$に含まれる点の数を\textbf{点数}と呼び，$|V(G)|$で表し，
+同様にグラフ$G$に含まれる辺の数を\textbf{辺数}と呼び，$|E(G)|$で表す．
+点数と辺数がともに有限であるグラフを\textbf{有限グラフ}と呼び，
+そうでないグラフを\textbf{無限グラフ}と呼ぶ．
+
+3点以上を結ぶ辺をハイパー辺と呼び，
+ハイパー辺を含むグラフをハイパーグラフと呼ぶが，
+この本では，ハイパーグラフを対象としない．
+
+\begin{figure}[htb]
+  \begin{center}
+    \includegraphics[width=4cm,clip]{eps/edge.eps}
+  \caption{3点と2辺からなるグラフ．}
+  \label{fig:edge}
+  \end{center}
+\end{figure}
+
+3点$u, v, w$とそれらを結ぶ辺$e,f$からなる
+グラフ(図\ref{fig:edge})について考える．
+辺$e$は点$u$に\textbf{接続}しているという．
+点$u$は辺$e$の\textbf{端点}であるという．
+辺$e$で結ばれている2点$u, v$は\textbf{隣接}しているという．
+端点$v$を共有している2辺$e, f$も\textbf{隣接}しているという．
+
+\end{document}
+
+
