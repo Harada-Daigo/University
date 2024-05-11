@@ -1,0 +1,13 @@
+How many fields does the Point have?
+    The Point has 2 fields.
+How many fields does the MovingPoint have?
+    The MovingPoint has 4 fields.
+How many methods does the Point have?
+    The Point has 3 methods.
+How many methods does the MovingPoint have?
+    The MovingPoint has 5 methods.
+Are there any fields with the same meaning in the Point and MovingPoint classes?
+    Yes,there are.
+Are there any methods in the Point and MovingPoint classes expressing similar behavior?
+    Yes,there are.
+

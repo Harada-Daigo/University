@@ -1,0 +1,3 @@
+methodOne in ClassB overrides one in ClassA.
+methodThree in ClassB hide one in ClassA.
+Other method in ClassB was inherited form in classA.

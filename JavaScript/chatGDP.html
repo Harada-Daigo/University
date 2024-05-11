@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Line Chart Example</title>
+	<!-- Chart.js CDNを読み込む -->
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+	<h1>Line Chart Example</h1>
+	<!-- グラフを描画するキャンバス要素 -->
+	<canvas id="myChart"></canvas>
+
+	<script>
+		// データセット1
+		var data1 = {
+			label: "Dataset 1",
+			data: [10, 20, 30, 40, 50, 60, 70],
+			borderColor: "red",
+			fill: false
+		};
+
+		// データセット2
+		var data2 = {
+			label: "Dataset 2",
+			data: [20, 30, 40, 50, 60, 70, 80],
+			borderColor: "blue",
+			fill: false
+		};
+
+		// データセット3
+		var data3 = {
+			label: "Dataset 3",
+			data: [30, 40, 50, 60, 70, 80, 90],
+			borderColor: "green",
+			fill: false
+		};
+
+		// ラベル
+		var labels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"];
+
+		// グラフを描画するキャンバス要素を取得する
+		var ctx = document.getElementById("myChart").getContext("2d");
+
+		// 折れ線グラフを描画する
+		var myChart = new Chart(ctx, {
+			type: "line",
+			data: {
+				labels: labels,
+				datasets: [data1, data2, data3]
+			},
+			options: {
+				title: {
+					display: true,
+					text: "Line Chart Example"
+				}
+			}
+		});
+	</script>
+</body>
+</html>

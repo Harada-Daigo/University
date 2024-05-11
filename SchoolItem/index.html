@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+        
+        <title>時間割</title>
+        <style>
+            @media  screen and (max-width:1500px) and (min-width:481px){
+                html,body{
+                    background-color:lightgrey;
+                    overflow: hidden;
+                    height: 100vh;
+                    width: 100vw;
+                    min-height: 100vh;
+                    text-align: left;
+                    display: flex;
+                }
+                input{
+                    width: 10vh;
+                    height: 10vh; 
+                    vertical-align: middle;
+                    
+                }
+                p{
+                    margin-bottom: 0;
+                }
+                #Input{
+                    vertical-align: middle;
+                    width: 65vw;
+                    height: 100vh;
+                    background-color: white;
+                }
+                #side{
+                    width: 33vw;
+                    height: 100vh;
+                    background-color: white;
+                    margin-left: 10px;
+                    overflow:auto;
+                    
+                }
+            }
+        @media  screen and (max-width:650px) {
+            html,body{
+                background-color:lightgrey;
+                height: 100vh;
+                width: 100vw;
+                min-height: 100vh;
+                display: flex;
+                flex-flow:column ;
+            }
+            input{
+                width: 10vh;
+                height: 10vh;
+                margin-left:auto;
+                margin-right: auto;
+            }
+            p{
+                margin-bottom: 0;
+            }
+            #Input{
+                width: 100vw;
+                height: 100vh;
+                background-color: white;
+            }
+            #side{
+                margin: 0px;
+                margin-top:10px ;
+                width: 100vw;
+                height: 50vh;
+                background-color: white;
+                overflow:auto;
+                }
+            }
+ 
+        </style>
+        <script>
+            var vh = window.innerHeight;
+            document.getElementById("input").style.height=vh+"px";
+            function func(){
+                array = [
+                    [
+                        false,
+                        "https://elms.u-aizu.ac.jp/course/view.php?id=5415",
+                        "https://elms.u-aizu.ac.jp/course/view.php?id=5416",
+                        "https://elms.u-aizu.ac.jp/course/view.php?id=5310",
+                        false,
+                        false
+                    ],
+                    [
+                        false,
+                        "https://elms.u-aizu.ac.jp/course/view.php?id=5517",
+                        "https://elms.u-aizu.ac.jp/course/view.php?id=5322",
+                        "https://elms.u-aizu.ac.jp/course/view.php?id=5588",
+                        "https://elms.u-aizu.ac.jp/course/view.php?id=5238",
+                        false
+                    ],
+                    [
+                        "https://elms.u-aizu.ac.jp/course/view.php?id=5311",
+                        "https://elms.u-aizu.ac.jp/course/view.php?id=5311",
+                        false,
+                        false,
+                        false,
+                        false
+                    ],
+                    [
+                        "https://elms.u-aizu.ac.jp/course/view.php?id=5322",
+                        "https://elms.u-aizu.ac.jp/course/view.php?id=5415",
+                        "https://elms.u-aizu.ac.jp/course/view.php?id=5416",
+                        "https://elms.u-aizu.ac.jp/course/view.php?id=5310",
+                        false,
+                        false
+                    ],
+                    [
+                        false,
+                        "https://elms.u-aizu.ac.jp/course/view.php?id=5517",
+                        "https://elms.u-aizu.ac.jp/course/view.php?id=5322",
+                        false,
+                        "https://elms.u-aizu.ac.jp/course/view.php?id=5238",
+                        false
+                    ]
+                ];
+
+                var week = new Date().getDay();
+                var input = document.querySelectorAll("input");
+                console.log(input);
+
+                for(let i=0;i<6;i++) input[i].style.backgroundColor = 'gray';
+
+                if (week!=0 && week!=6){
+                    for(let i=0;i<6;i++)
+                    {
+                        if(array[week-1][i]!=false){
+                            input[i].style.backgroundColor ='';
+                            input[i].addEventListener("click",function(e){
+                                location.href = array[week-1][i];
+                            });
+                        }
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body onload="func()">
+        <div id="Input">
+        <p>時間割</p>
+        <input type="button" value="1-2" id="1">
+        <br>
+        <input type="button"value="3-4" id="2">
+        <br>
+        <input type="button"value="5-6" id="3">
+        <br>
+        <input type="button"value="7-8" id="4">
+        <br>
+        <input type="button"value="9-10" id="5">
+        <br>
+        <input type="button"value="11" id="6">
+        </div>
+        <div id="side">
+            <h3>url</h3>
+            <li><a href="https://elms.u-aizu.ac.jp/my/">LMS</a> </li>
+            <li><a href="https://csweb.u-aizu.ac.jp/campusweb/campusportal.do?page=main">学務システム</a></li>
+        </div>
+    </body>
+</html>

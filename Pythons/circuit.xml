@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+    <circuit>
+        <output id="out1">
+            <and id="and1">
+                <input id="in1" />
+                <or id="or1" />
+            </and>
+            <or id="or1">
+                <input id="in2" />
+                <input id="in3" />
+            </or> 
+        </output>
+    </circuit>
+    <simulation>
+        <in id="in1">0</in>
+        <in id="in2">0</in>
+        <in id="in3">0</in>
+        <time>50</time>
+        <in id="in1">1</in>
+        <in id="in2">1</in>
+        <in id="in3">1</in>
+        <time>50</time>
+        <in id="in1">1</in>
+        <in id="in2">0</in>
+        <in id="in3">0</in>
+    </simulation>
+    <result>
+    <simulator0><out1 timeline="0" /></simulator0><simulator0 /><simulator1><out1 timeline="0" /><out1 timeline="50" /></simulator1></result>
+</root>
